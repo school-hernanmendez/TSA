@@ -3,7 +3,7 @@
     <Navbar state="initial"/>
     <div class="homescreen full">
       <div class="title"></div>
-      <div class="title"></div>
+      <div class="right"></div>
     </div>
   </div>
 </template>
