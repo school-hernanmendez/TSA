@@ -92,6 +92,7 @@ export default {
 .music {
   transform: scale(1);
   transition: transform 0.6s;
+  background-size: cover;
 }
 .programs:hover,
 .chapter:hover,
