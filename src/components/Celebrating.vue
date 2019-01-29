@@ -18,20 +18,12 @@ export default {
 
 <style scoped>
 .homescreen {
-  display: flex;
-  flex-direction: row;
-}
-.title {
-  flex: 3;
-}
-.right {
-  flex: 1;
   background: linear-gradient(
-      135deg,
-      white 50%,
-      rgb(173, 173, 173) 50%,
-      rgb(173, 173, 173) 55%,
-      rgba(0, 0, 0, 0) 55%
+      110deg,
+      white 70%,
+      rgb(173, 173, 173) 70%,
+      rgb(173, 173, 173) 72%,
+      rgba(0, 0, 0, 0) 72%
     ),
     url("https://images.unsplash.com/photo-1525025500848-f00b7d362dec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
 }
