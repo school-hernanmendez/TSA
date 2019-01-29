@@ -2,7 +2,7 @@
   <div class="home">
     <p class="celebration">Celebration TSA</p>
     <div class="big-three">
-      <div class="chapter">
+      <div class="chapter" @click="chapter">
         <div class="content">
           <div>
             <h2>Our Chapter</h2>
@@ -10,7 +10,7 @@
           </div>
         </div>
       </div>
-      <div class="music">
+      <div class="music" @click="music">
         <div class="content">
           <div>
             <h2>Celebrating the music</h2>
@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      <div class="programs">
+      <div class="programs" @click="programs">
         <div class="content">
           <div>
             <h2>Our CTE Programs</h2>
@@ -33,8 +33,16 @@
 <script>
 export default {
   name: "Home",
-  props: {
-    msg: String
+  methods: {
+    chapter() {
+      this.$router.push("/chapter");
+    },
+    music() {
+      this.$router.push("/celebrating");
+    },
+    programs() {
+      this.$router.push("/programs");
+    }
   }
 };
 </script>
@@ -48,6 +56,7 @@ export default {
   flex-direction: column;
   overflow: hidden;
   color: #222;
+  background-color: rgb(225, 227, 229);
 }
 .celebration {
   margin: 10px auto;
@@ -59,7 +68,7 @@ export default {
   flex: 1;
   display: flex;
   flex-direction: row;
-  transform: scale(.94);
+  transform: scale(0.94);
 }
 .big-three > div {
   display: flex;
