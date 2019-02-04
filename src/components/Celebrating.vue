@@ -1,9 +1,10 @@
 <template>
   <div class="container">
+    <div class="top-screen"></div>
     <Navbar state="initial" />
     <div class="homescreen full">
       <div class="title">
-        <h1 class="wilder">Wilder</h1>
+        <h1 class="wilder" data-scroll>Wilder</h1>
         <p class="motto">So wild, we don't even have a motto</p>
       </div>
       <div class="right"></div>
@@ -11,9 +12,9 @@
     <div class="weare full">
       <div class="top"></div>
       <div class="bottom"></div>
-      <div class="top-shadow"></div>
-      <div class="bottom-shadow"></div>
-      <div class="content">
+      <div class="top-shadow" data-scroll></div>
+      <div class="bottom-shadow" data-scroll></div>
+      <div class="cnt">
         <h2>Who we are</h2>
         <p>
           We are just an imaginary band made by a weird, but smart and absolutely fabulous teenager.<br/>(weird flex, but ok)<br/> Our members are all depressed
@@ -22,35 +23,84 @@
         </p>
       </div>
     </div>
-    <div class="goals full">
-      <div>
+    <div class="beliefs">
+      <div data-scroll class="beliefs-in">
         <h2>Our beliefs</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div>
+    </div>
+    <div class="listen full">
+      <h1>Listen to us</h1>
+
+    </div>
+    <div class="Buy full">
+      <div class="cd"></div>
+      <div class="buy"></div>
+    </div>
+    <div class="Concerts full">
+      <div class="concerts-title"></div>
+    </div>
+    <div class="Board full">
+      <h2>Talk with the fans</h2>
+      <div class="message-board">
+        <div class="messages"></div>
+        <div></div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ScrollOut from 'scroll-out'
 import Navbar from "./navbar.vue";
+
+function c(el, ch) { 
+  return el.classList[0] === ch;
+  }
 
 export default {
   name: "Celebrating",
   components: {
     Navbar
+  },
+  mounted() {
+    this.so = ScrollOut({
+      threshold: .35,
+      onShown(el) {
+        if(c(el, "top-shadow")) {
+          el.style.left = "18.5%"
+        } else if(c(el, "bottom-shadow")) {
+          el.style.left = "8.5%"
+        } else if(c(el, "wilder")) {
+          document.getElementsByClassName('navbar-wrapper')[0].classList.remove('fullnav')
+        } else if(c(el, "beliefs-in")) {
+          el.style.boxShadow = "-12px 11px 0px 0px rgba(231,166,26,1)"
+        }
+      },
+      onHidden(el) {
+        if(c(el, "top-shadow")) {
+          el.style.left = "20%"
+        } else if(c(el, "bottom-shadow")) {
+          el.style.left = "10%"
+        } else if(c(el, "wilder")) {
+          document.getElementsByClassName('navbar-wrapper')[0].classList.add('fullnav')
+        } else if(c(el, "beliefs-in")) {
+          el.style.boxShadow = "0px 0px 0px 0px rgba(231,166,26,1)"
+        }
+      }
+    });
+  },
+  destroyed() {
+    this.so.teardown();
   }
 };
 
 </script>
 
-<style scoped>
+<style>
 .homescreen {
   display: flex;
   flex-direction: row;
-}
-.full {
-  height: 100vh;
-  width: 100%;
 }
 .title {
   flex: 1;
@@ -99,8 +149,8 @@ export default {
 .top {
   background-color: #777;
   position: absolute;
-  height: 60vh;
-  width: 40vh;
+  height: 55vh;
+  width: 35vh;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   left: 20%;
   z-index: 1;
@@ -112,8 +162,8 @@ export default {
 }
 .bottom {
   position: absolute;
-  height: 60vh;
-  width: 40vh;
+  height: 55vh;
+  width: 35vh;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   bottom: 0;
   left: 10%;
@@ -127,64 +177,70 @@ export default {
 .top-shadow {
   background-color: rgb(255, 255, 255);
   position: absolute;
-  height: 60vh;
-  width: 40vh;
+  height: 55vh;
+  width: 35vh;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
-  left: 19%;
+  left: 20%;
+  transition: left .4s ease-out .2s;
 }
 .bottom-shadow {
   background-color: rgb(255, 255, 255);
   position: absolute;
-  height: 60vh;
-  width: 40vh;
+  height: 55vh;
+  width: 35vh;
   bottom: 0;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  left: 9%;
+  left: 10%;
+  transition: left .4s ease-out .2s;
 }
-.content {
+.cnt {
   float: right;
-  width: 40vw;
+  width: 30vw;
   text-align: center;
   color: white;
-  margin-right: 15vw;
-  margin-top: 5vh;
+  margin-right: 20vw;
+  margin-top: 15vh;
 }
-.content > h2 {
+.cnt > h2 {
   font-family: 'Rock Salt', cursive;
-  font-size: 60px;
-  margin-bottom: -10px;
+  font-size: 50px;
+  margin-bottom: -30px;
+  color: white;
 }
-.content > p {
-  font-size: 27px;
+.cnt > p {
+  font-size: 20px;
   font-family: 'Roboto Mono', monospace;
 }
-.goals {
+.beliefs {
   background-image: url('https://images.unsplash.com/photo-1521337581100-8ca9a73a5f79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=970&q=80');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   position: relative;
+  height: 600px;
 }
-.goals > div {
+.beliefs > div {
   position: absolute;
   left: 15%;
-  top: 15vh;
-  width: 380px;
-  height: 450px;
+  top: 100px;
+  width: 320px;
+  height: 380px;
   background-color: white;
-  box-shadow: -22px 21px 0px 0px rgba(231,166,26,1);
+  box-shadow: 0px 0px 0px 0px rgba(231,166,26,1);
+  transition: box-shadow 1s .2s;
 }
-.goals h2 {
+.beliefs h2 {
   font-family: 'Permanent Marker', cursive;
   font-weight: lighter;
   font-size: 40px;
   margin: 0;
   width: 100%;
   text-align: center;
+  color: black;
 }
-.goals p {
+.beliefs p {
   margin: 10px 25px;
-  font-size: 26px;
+  font-size: 22px;
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
 }

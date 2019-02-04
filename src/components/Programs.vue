@@ -1,13 +1,16 @@
 <template>
-    <span>Pro</span>
+  <div>
+    <div class="program full">
+
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-   name: "Programs"
+  name: "Programs"
 };
 </script>
 
 <style>
-
 </style>

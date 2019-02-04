@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "jump.js": "^1.0.2",
+    "scroll-out": "^2.2.4",
     "vue": "^2.5.21",
     "vue-router": "^3.0.2"
   },

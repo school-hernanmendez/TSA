@@ -1,24 +1,40 @@
 <template>
-    <div>
-    <div class="navbar" v-if="state == 'initial'">
-        <div><i class="material-icons h">home</i><i class="material-icons b">keyboard_backspace</i></div>
-        <p class="BIG">Wilder</p>
-        <p>Who we are</p>
-        <p></p>
-    </div>
-    <div class="navbar-full" v-else>
+    <div class="navbar-wrapper">
+    <div class="bar"></div>
+    <div class="navbar">
+        <div @click="home"><i class="material-icons h">home</i><i class="material-icons b">keyboard_backspace</i></div>
+        <p @click="wilder" class="BIG">Wilder</p>
+        <p @click="weare">Who we are</p>
+        <p @click="beliefs">Our Beliefs</p>
+        <p class="nav-last"></p>
     </div>
     </div>
 </template>
 
 <script>
+import jump from 'jump.js'
 export default {
   name: "navbar",
-  props: ['state']
+  props: ['state'],
+  methods: {
+      home() {
+          this.$router.push("/");
+      },
+      wilder() {
+          jump('.top-screen')
+      },
+      weare() {
+          jump('.weare')
+      },
+      beliefs() {
+          jump('.beliefs')
+      }
+  }
 };
+
 </script>
 
-<style scoped>
+<style>
     .navbar {
         position: fixed;
         background: linear-gradient(rgba(0, 0, 0, 0.10) 0%, rgba(255, 255, 255, 0) 80%);
@@ -28,17 +44,22 @@ export default {
         z-index: 10;
         margin: 0;
     }
-    .navbar-full {
-        position: absolute;
-        background-color: white;
-        height: 30px;
+    .bar {
+        position: fixed;
+        height: 0px;
         width: 100%;
-        width: 100vw;
+        background-color: black;
+        transition: height .2s ease-in-out;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        z-index: 10;
-        margin: 0;
     }
-    .navbar, .navbar-full, .navbar > div {
+    .fullnav > .navbar {
+        color: white;
+    }
+    .fullnav > .bar {
+        height: 40px;
+        z-index: 9;
+    }
+    .navbar, .navbar > div {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -73,8 +94,15 @@ export default {
     }
     .BIG {
         font-family: 'Rock Salt', cursive;
-        font-size: 25px;
+        font-size: 25px !important;
         flex: 1;
     }
-    
+    .navbar > p {
+        margin-right: 16px;
+        font-size: 18px;
+        font-weight: 100;
+    }
+    p.nav-last {
+        width: 30px;
+    }
 </style>

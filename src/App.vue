@@ -23,4 +23,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.full {
+  height: 100vh;
+  width: 100%;
+}
 </style>
