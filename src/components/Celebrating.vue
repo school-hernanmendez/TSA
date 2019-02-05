@@ -131,7 +131,7 @@ export default {
       #adadad 47%,
       rgba(0, 0, 0, 0) 47%
     ),
-    url("https://images.unsplash.com/photo-1525025500848-f00b7d362dec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    url("../assets/u-band.jpeg");
     background: linear-gradient(
       117deg,
       white calc(47% - 10px),
@@ -140,7 +140,8 @@ export default {
       rgba(238, 238, 238, .2) calc(47% + 1px),
       rgba(0, 0, 0, 0) 47%
     ),
-    url("https://images.unsplash.com/photo-1525025500848-f00b7d362dec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    url("../assets/u-band.jpeg");
+  background-position: left;
 }
 .weare {
   background-color: #111;
@@ -156,7 +157,7 @@ export default {
   z-index: 1;
   background: 
   linear-gradient(rgba(0, 94, 255, 0.8) 0%, rgba(0, 94, 255, 0.5) 100%),
-  url('https://images.unsplash.com/photo-1431069931897-aa1c99a2d2fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80');
+  url("../assets/u-guitar.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -170,7 +171,7 @@ export default {
   z-index: 1;
   background: 
   linear-gradient(rgba(255, 102, 0, 0.5) 0%, rgba(255, 102, 0, 0.8) 100%),
-  url('https://images.unsplash.com/photo-1463421585849-6b0acf2c9257?ixlib=rb-1.2.1&auto=format&fit=crop&w=966&q=80');
+  url("../assets/u-singer.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -212,7 +213,7 @@ export default {
   font-family: 'Roboto Mono', monospace;
 }
 .beliefs {
-  background-image: url('https://images.unsplash.com/photo-1521337581100-8ca9a73a5f79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=970&q=80');
+  background-image: url("../assets/u-beli.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

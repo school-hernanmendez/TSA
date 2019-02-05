@@ -2,6 +2,7 @@
   <div>
     <i class="material-icons ch" @click="home">home</i>
     <div class="chstsa full">
+      <div class="tsa-image"></div>
       <div class="tsa-title">
         <h1>
           <span>CHS</span>
@@ -13,122 +14,127 @@
         </h1>
         <h2>"Learning to lead in a technical world."</h2>
       </div>
-      <div class="tsa-image"></div>
     </div>
-    <div class="officers">
-      <h3>Our Officers</h3>
-      <div class="officer" data-scroll>
-        <div class="officer-img A"></div>
-        <hr>
-        <div>
-          <p>
-            <b>Audrey Jones</b>
-          </p>
-          <p>President</p>
+    <div class="officers-wrapper">
+      <div class="officers">
+        <h3>Our Officers</h3>
+        <div class="officer" data-scroll>
+          <div class="officer-img A"></div>
+          <hr>
+          <div>
+            <p>
+              <b>Audrey Jones</b>
+            </p>
+            <p>President</p>
+          </div>
         </div>
-      </div>
-      <div class="officer" data-scroll>
-        <div class="officer-img K"></div>
-        <hr>
-        <div>
-          <p>
-            <b>Kevin Swamy</b>
-          </p>
-          <p>Vice President</p>
+        <div class="officer" data-scroll>
+          <div class="officer-img K"></div>
+          <hr>
+          <div>
+            <p>
+              <b>Kevin Swamy</b>
+            </p>
+            <p>Vice President</p>
+          </div>
         </div>
-      </div>
-      <div class="officer" data-scroll>
-        <div class="officer-img L"></div>
-        <hr>
-        <div>
-          <p>
-            <b>Timmy Lu</b>
-          </p>
-          <p>Treasurer</p>
+        <div class="officer" data-scroll>
+          <div class="officer-img L"></div>
+          <hr>
+          <div>
+            <p>
+              <b>Timmy Lu</b>
+            </p>
+            <p>Treasurer</p>
+          </div>
         </div>
-      </div>
-      <div class="officer" data-scroll>
-        <div class="officer-img R"></div>
-        <hr>
-        <div>
-          <p>
-            <b>David Robidas</b>
-          </p>
-          <p>Secretary</p>
+        <div class="officer" data-scroll>
+          <div class="officer-img R"></div>
+          <hr>
+          <div>
+            <p>
+              <b>David Robidas</b>
+            </p>
+            <p>Secretary</p>
+          </div>
         </div>
-      </div>
-      <div class="officer" data-scroll>
-        <div class="officer-img Ly"></div>
-        <hr>
-        <div>
-          <p>
-            <b>Adonis Lysandrou</b>
-          </p>
-          <p>Reporter</p>
+        <div class="officer" data-scroll>
+          <div class="officer-img Ly"></div>
+          <hr>
+          <div>
+            <p>
+              <b>Adonis Lysandrou</b>
+            </p>
+            <p>Reporter</p>
+          </div>
         </div>
-      </div>
-      <div class="officer" data-scroll>
-        <div class="officer-img S"></div>
-        <hr>
-        <div>
-          <p>
-            <b>Vivian Spencer</b>
-          </p>
-          <p>Sergeant-at-Arms</p>
+        <div class="officer" data-scroll>
+          <div class="officer-img S"></div>
+          <hr>
+          <div>
+            <p>
+              <b>Vivian Spencer</b>
+            </p>
+            <p>Sergeant-at-Arms</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="achievements">
-      <h1>Our achievements</h1>
-      <div class="national" data-scroll>
-        <div class="image-nat"></div>
-        <h3>
-          National level -
-          <span class="orange">2016</span>
-        </h3>
-        <p>
-          <span class="orange prio">1st place</span> in Problem Solving
-        </p>
-        <p>
-          <span class="orange">3rd place</span> in Structural Design & Engineering
-        </p>
-      </div>
-      <div class="FL" data-scroll>
-        <div class="image-FL"></div>
-        <h3>
-          State level FL -
-          <span class="orange">2017 & 2018</span>
-        </h3>
-        <p>
-          <span class="orange prio">11 Top 3</span> finishing teams
-        </p>
-        <p>
-          <span class="orange">10 Top 5</span> finishing teams
-        </p>
-        <p>
-          <span class="orange">ig20 Top 10</span> finishing teams
-        </p>
+      <div class="achievements-inner">
+        <h1>Our achievements</h1>
+        <div class="national" data-scroll>
+          <div class="image-nat"></div>
+          <h3>
+            National level -
+            <span class="orange">2016</span>
+          </h3>
+          <p>
+            <span class="orange prio">1st place</span> in Problem Solving
+          </p>
+          <p>
+            <span class="orange">3rd place</span> in Structural Design & Engineering
+          </p>
+        </div>
+        <div class="FL" data-scroll>
+          <div class="image-FL"></div>
+          <h3>
+            State level FL -
+            <span class="orange">2017 & 2018</span>
+          </h3>
+          <p>
+            <span class="orange prio">11 Top 3</span> finishing teams
+          </p>
+          <p>
+            <span class="orange">10 Top 5</span> finishing teams
+          </p>
+          <p>
+            <span class="orange">20 Top 10</span> finishing teams
+          </p>
+        </div>
       </div>
     </div>
-    <div>
-      <h2>About TSA</h2>
-      <div>
-        <h3>Mission Statement</h3>
-        <p>The Technology Student Association (TSA) enhances personal development, leadership, and career opportunities in science, technology, engineering, and math (STEM), whereby members apply and integrate these concepts through intracurricular activities, competitions, and related programs.</p>
-      </div>
-      <div>
-        <h3>Vision Statement</h3>
-        <p>TSA is accelerating student achievement and supporting teachers by providing engaging opportunities to develop STEM skills.</p>
-      </div>
-      <div>
-        <h3>Motto</h3>
-        <p>Learning to lead in a technical world.</p>
-      </div>
-
-      <div>
-        <h3>Creed</h3>
-        <p>I believe that Technology Education holds an important place in my life in the technical world. I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry. Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live.</p>
-        <p>I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living. I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability. I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.</p>
+    <div class="about">
+      <div class="about-inner">
+        <h2>About TSA</h2>
+        <div>
+          <h3>Mission Statement</h3>
+          <p>The Technology Student Association (TSA) enhances personal development, leadership, and career opportunities in science, technology, engineering, and math (STEM), whereby members apply and integrate these concepts through intracurricular activities, competitions, and related programs.</p>
+        </div>
+        <div>
+          <h3>Vision Statement</h3>
+          <p>TSA is accelerating student achievement and supporting teachers by providing engaging opportunities to develop STEM skills.</p>
+        </div>
+        <div>
+          <h3>Motto</h3>
+          <p>Learning to lead in a technical world.</p>
+        </div>
+        <div>
+          <h3>Creed</h3>
+          <p>I believe that Technology Education holds an important place in my life in the technical world. I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry. Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live.</p>
+          <p>I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living. I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability. I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.</p>
+        </div>
+        <span>Source: tsaweb.org</span>
       </div>
     </div>
   </div>
@@ -145,11 +151,11 @@ export default {
         if (el.classList[0] == "officer") {
           el.style.opacity = 1;
           el.style.transform = "scale(1)";
-        } else if (el.classList[0] == "national") {
+        } else if (el.classList[0] == "national" && window.innerWidth > 700) {
           el.style.opacity = 1;
           el.style.left = "0px";
           el.style.transform = "scale(1)";
-        } else if (el.classList[0] == "FL") {
+        } else if (el.classList[0] == "FL" && window.innerWidth > 700) {
           el.style.opacity = 1;
           el.style.right = "0px";
           el.style.transform = "scale(1)";
@@ -159,11 +165,11 @@ export default {
         if (el.classList[0] == "officer") {
           el.style.opacity = 0.7;
           el.style.transform = "scale(.4)";
-        } else if (el.classList[0] == "national") {
+        } else if (el.classList[0] == "national" && window.innerWidth > 700) {
           el.style.opacity = 0.7;
           el.style.left = "-150px";
           el.style.transform = "scale(.8)";
-        } else if (el.classList[0] == "FL") {
+        } else if (el.classList[0] == "FL" && window.innerWidth > 700) {
           el.style.opacity = 0.7;
           el.style.right = "-150px";
           el.style.transform = "scale(.8)";
@@ -183,6 +189,35 @@ export default {
 </script>
 
 <style>
+.about {
+  font-family: "Righteous", cursive;
+  background-color: rgb(227, 227, 227);
+  padding: 30px 0;
+  background: url("../assets/TSA.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-size: 25px;
+}
+.about p,
+.about span {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+.about h3 {
+  font-weight: lighter;
+  margin-bottom: 6px;
+}
+.about h2 {
+  margin: 0;
+  font-size: 60px;
+}
+.about-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .image-nat {
   background: url("../assets/thumbnail-2.jpg");
   width: 200px;
@@ -204,13 +239,16 @@ export default {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .achievements {
-  padding: 240px;
   padding-top: 20px;
   background-color: orange;
   color: white;
   padding-bottom: 40px;
 }
-.achievements > h1 {
+.achievements-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.achievements-inner > h1 {
   font-size: 80px;
   font-family: "Righteous", cursive;
   margin-top: 0;
@@ -241,7 +279,6 @@ export default {
 span.orange {
   color: orange;
 }
-
 span.orange.prio {
   border: 2px solid rgba(255, 166, 0, 0.76);
   padding: 8px;
@@ -277,13 +314,14 @@ span.orange.prio {
   padding: 10px;
   font-size: 40px;
   transition: padding-left 0.3s;
+  z-index: 100;
 }
 .ch:hover {
   padding-left: 25px;
 }
 .chstsa h1 {
   font-size: 120px;
-  margin-top: 20%;
+  margin-top: 20vh;
   margin-left: 20px;
   margin-bottom: 20px;
   font-family: "Righteous", cursive;
@@ -298,9 +336,6 @@ span.orange.prio {
   color: #555;
 }
 .chstsa {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
   background: linear-gradient(
     80deg,
     white calc(50% - 2px),
@@ -310,10 +345,16 @@ span.orange.prio {
   );
 }
 .tsa-title {
-  flex: 3;
+  width: 60vw;
+  padding-top: 25vh;
+}
+.tsa-title h1 {
+  margin-top: 0;
 }
 .tsa-image {
-  flex: 2;
+  width: 40vw;
+  height: 100vh;
+  float: right;
   background: url("../assets/tsa.jpg");
   background-position: center;
   background-size: cover;
@@ -363,8 +404,11 @@ s {
   }
 }
 .officers {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.officers-wrapper {
   background-color: #373749;
-  padding: 250px;
   padding-bottom: 0px;
   padding-top: 20px;
 }
@@ -418,5 +462,202 @@ hr {
 }
 b {
   font-size: 20px;
+}
+@media (orientation: portrait) {
+  .achievements-inner,
+  .about-inner {
+    max-width: 800px;
+  }
+  .national {
+    position: static;
+  }
+  .FL {
+    position: static;
+  }
+  .about {
+    background: #f0f0f0;
+  }
+}
+@media (orientation: portrait) and (min-width: 800px) {
+  .officers {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header";
+    grid-column-gap: 10px;
+  }
+}
+@media (max-width: 1050px) {
+  .achievements-inner,
+  .about-inner {
+    max-width: 800px;
+  }
+  .national {
+    position: static;
+  }
+  .FL {
+    position: static;
+  }
+  .officers {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header";
+    grid-column-gap: 10px;
+    justify-items: center;
+  }
+  .chstsa {
+    background: url("../assets/tsa.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .tsa-image {
+    display: none;
+  }
+  .tsa-title {
+    width: 100%;
+    text-align: center;
+    padding-top: 20vh;
+  }
+  .tsa-title h1 {
+    font-size: 150px;
+  }
+  .tsa-title h2 {
+    font-size: 75px;
+    max-width: 100%;
+    padding: 0 5vw;
+    margin: 0;
+    color: white;
+  }
+  s {
+    color: #f34418;
+  }
+}
+@media (max-width: 800px) {
+  .officers {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header";
+    grid-column-gap: 10px;
+  }
+  .chstsa {
+    background: url("../assets/tsa.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .tsa-image {
+    display: none;
+  }
+  .tsa-title {
+    width: 100%;
+    text-align: center;
+    padding-top: 20vh;
+  }
+  .tsa-title h2 {
+    font-size: 55px;
+    max-width: 100%;
+    padding: 0 5vw;
+    margin: 0;
+    color: white;
+  }
+  s {
+    color: #f34418;
+  }
+}
+@media (max-width: 720px) {
+  .achievements h1 {
+    font-size: 47px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .national {
+    opacity: 1;
+    transform: scale(1);
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-bottom: 10px;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .image-nat {
+    float: none;
+    width: 100%;
+    box-shadow: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .FL {
+    opacity: 1;
+    transform: scale(1);
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-bottom: 10px;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .image-FL {
+    float: none;
+    width: 100%;
+    box-shadow: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .FL h3,
+  .national h3 {
+    font-size: 30px;
+    width: 90%;
+    margin: 10px auto;
+    margin-bottom: 24px;
+  }
+  .FL p,
+  .national p {
+    font-size: 24px;
+    width: 90%;
+    margin: 0px auto;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  span.orange.prio {
+    font-size: 24px;
+    padding: 6px;
+  }
+}
+@media (max-width: 520px) {
+  .chstsa {
+    background: url("../assets/tsa.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .tsa-image {
+    display: none;
+  }
+  .tsa-title {
+    width: 100%;
+    text-align: center;
+    padding-top: 20vh;
+  }
+  .tsa-title h1 {
+    font-size: 50px;
+  }
+  .tsa-title h2 {
+    font-size: 35px;
+    max-width: 100%;
+    padding: 0 5vw;
+    margin: 0;
+  }
+  .officers {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header";
+    grid-column-gap: 10px;
+  }
+  .officers h3 {
+    letter-spacing: 3px;
+    font-size: 40px;
+  }
+  .officer {
+    width: 70%;
+  }
 }
 </style>

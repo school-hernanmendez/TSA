@@ -4,26 +4,17 @@
     <div class="big-three">
       <div class="chapter" @click="chapter">
         <div class="content">
-          <div>
             <h2>Our Chapter</h2>
-            <p>Here we say, like, y'know, cool stuff</p>
-          </div>
         </div>
       </div>
       <div class="music" @click="music">
         <div class="content">
-          <div>
             <h2>Celebrating the music</h2>
-            <p>Here we say, like, y'know, cool stuff</p>
-          </div>
         </div>
       </div>
       <div class="programs" @click="programs">
         <div class="content">
-          <div>
             <h2>Our CTE Programs</h2>
-            <p>Here we say, like, y'know, cool stuff</p>
-          </div>
         </div>
       </div>
     </div>
@@ -76,15 +67,15 @@ export default {
   margin: 0 5px;
 }
 .chapter {
-  background-image: url("https://www.positivelyosceola.com/wp-content/uploads/2018/02/celebrationhigh.jpg");
+  background-image: url("../assets/u-chapter.jpg");
   flex: 5;
 }
 .music {
-  background-image: url("https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-image: url("../assets/u-music.jpg");
   flex: 9;
 }
 .programs {
-  background-image: url("https://images.unsplash.com/photo-1520229534044-62d7cd4e9b0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-image: url("../assets/u-CTE.jpeg");
   flex: 5;
 }
 .programs,
@@ -93,6 +84,7 @@ export default {
   transform: scale(1);
   transition: transform 0.6s;
   background-size: cover;
+  background-position: center;
 }
 .programs:hover,
 .chapter:hover,
@@ -106,15 +98,11 @@ export default {
   background-color: rgba(255, 255, 255, 0.6);
   transition: opacity 0.6s;
   padding: 20px 30px;
+  padding-bottom: 0;
   box-sizing: border-box;
   width: 100%;
   flex: 1;
-}
-
-.content > div {
-  position: relative;
-  top: 10px;
-  transition: top 0.5s;
+  text-align: center;
 }
 
 .content h2 {
@@ -123,11 +111,7 @@ export default {
   color: #222;
   font-weight: lighter;
   margin: 0;
-}
-
-.content p {
-  font-size: 22px;
-  color: #222;
+  margin-top: 20vh;
 }
 
 .programs:hover > .content,
@@ -136,9 +120,41 @@ export default {
   opacity: 1;
 }
 
-.programs:hover > .content > div,
-.chapter:hover > .content > div,
-.music:hover > .content > div {
-  top: 0;
+@media (orientation: portrait) {
+  .big-three {
+    flex-direction: column;
+  }
+  .big-three > div {
+    margin-top: 20px;
+  }
+  .content {
+    opacity: 1;
+  }
+  .content h2 {
+    margin-top: 5vh;
+  }
+  .celebration {
+    margin-bottom: -30px;
+  }
+}
+@media (orientation: portrait) and (min-width: 800px) {
+  .content h2 {
+    font-size: 67px;
+  }
+  .celebration {
+    margin-bottom: -30px;
+  }
+}
+@media (max-width: 530px) {
+  .content {
+    padding: 5px;
+    padding-bottom: 0;
+  }
+  .celebration {
+    font-size: 40px;
+  }
+  .content h2 {
+    font-size: 34px;
+  }
 }
 </style>
