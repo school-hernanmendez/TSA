@@ -4,8 +4,8 @@
     <div class="navbar">
         <div @click="home"><i class="material-icons h">home</i><i class="material-icons b">keyboard_backspace</i></div>
         <p @click="wilder" class="BIG">Wilder</p>
-        <p @click="weare">Who we are</p>
-        <p @click="beliefs">Our Beliefs</p>
+        <p @click="weare" class="whoWeAre">Who we are</p>
+        <p @click="beliefs" class="ourBeliefs">Our Beliefs</p>
         <p class="nav-last"></p>
     </div>
     </div>
@@ -104,5 +104,13 @@ export default {
     }
     p.nav-last {
         width: 30px;
+    }
+    @media (orientation: portrait) {
+        .navbar, .bar {
+            position: absolute;
+        }
+        .whoWeAre, .ourBeliefs {
+            display: none;
+        }
     }
 </style>

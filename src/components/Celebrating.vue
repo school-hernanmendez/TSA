@@ -16,29 +16,17 @@
       <div class="bottom-shadow" data-scroll></div>
       <div class="cnt">
         <h2>Who we are</h2>
-        <p>
-          We are Wilder, and we play for the uniquely wild You. We’re just five misfits with a passion for music, and true self-expression. 
-        </p>
+        <p>We are Wilder, and we play for the uniquely wild You. We’re just five misfits with a passion for music, and true self-expression.</p>
       </div>
     </div>
     <div class="beliefs">
       <div data-scroll class="beliefs-in">
         <h2>Our beliefs</h2>
-        <p>
-Music is a powerful art. It’s a gift that allows us to express who we are and experience life to its fullest. Wilder believes in freedom, beauty, truth, and love. 
-</p>
+        <p>Music is a powerful art. It’s a gift that allows us to express who we are and experience life to its fullest. Wilder believes in freedom, beauty, truth, and love.</p>
       </div>
     </div>
     <div class="listen full">
       <h1>Listen to us</h1>
-      <audio src="../assets/music/The_Inventors_-_01_-_Perfect.mp3" class="p1a"></audio>
-      <audio src="../assets/music/The_Inventors_-_02_-_10s_and_9s.mp3" class="p2a"></audio>
-      <audio src="../assets/music/The_Inventors_-_03_-_Still_Sailor.mp3" class="p3a"></audio>
-      <audio src="../assets/music/The_Inventors_-_04_-_Melon.mp3" class="p4a"></audio>
-      <audio src="../assets/music/The_Inventors_-_05_-_Venice.mp3" class="p5a"></audio>
-      <audio src="../assets/music/The_Inventors_-_06_-_Fire.mp3" class="p6a"></audio>
-      <audio src="../assets/music/The_Inventors_-_08_-_Malala.mp3" class="p7a"></audio>
-      <audio src="../assets/music/The_Inventors_-_09_-_Blood_Milk.mp3" class="p8a"></audio>
       <div>
         <div class="player p1">
           <i class="material-icons">play_arrow</i>
@@ -83,7 +71,7 @@ Music is a powerful art. It’s a gift that allows us to express who we are and 
         <button class="2">Download</button>
       </div>
     </div>
-    <Copyright />
+    <Copyright/>
   </div>
 </template>
 
@@ -115,7 +103,9 @@ export default {
             .getElementsByClassName("navbar-wrapper")[0]
             .classList.remove("fullnav");
         } else if (c(el, "beliefs-in")) {
-          el.style.boxShadow = "-12px 11px 0px 0px rgba(231,166,26,1)";
+          if (window.innerHeight <= window.innerWidth) {
+            el.style.boxShadow = "-12px 11px 0px 0px rgba(231,166,26,1)";
+          }
         }
       },
       onHidden(el) {
@@ -128,7 +118,9 @@ export default {
             .getElementsByClassName("navbar-wrapper")[0]
             .classList.add("fullnav");
         } else if (c(el, "beliefs-in")) {
-          el.style.boxShadow = "0px 0px 0px 0px rgba(231,166,26,1)";
+          if (window.innerHeight <= window.innerWidth) {
+            el.style.boxShadow = "0px 0px 0px 0px rgba(231,166,26,1)";
+          }
         }
       }
     });
@@ -312,8 +304,77 @@ export default {
   .bottom-shadow {
     display: none;
   }
+  .homescreen {
+    background: white;
+  }
+  .weare {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding-bottom: 20px;
+  }
   .cnt {
-
+    clear: both;
+    float: none;
+    margin: 0 auto;
+    width: 90%;
+    padding: 5vh 10px;
+  }
+  .cnt h2 {
+    font-size: 35px;
+    margin: 0;
+    width: 100%;
+  }
+  .cnt p {
+    margin: 0;
+    width: 100%;
+    font-size: 20px;
+  }
+  .beliefs {
+    height: auto;
+    padding: 10vh 20px;
+  }
+  .beliefs > div {
+   position: static;
+   background-color: white;
+   text-align: center;
+   width: 86vw;
+   height: auto;
+   padding: 30px 0;
+   margin: 0 auto;
+  }
+.beliefs h2 {
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.beliefs p {
+  margin: 10px 25px;
+  font-size: 20px;
+}
+  .right {
+    display: none;
+  }
+  .title {
+    text-align: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url("../assets/u-band.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
+  .title > .wilder {
+    margin: 0;
+    margin-top: 30vh;
+    font-size: 40px;
+  }
+  .title > .motto {
+    font-size: 25px;
+    position: static;
+    width: 100%;
+    margin: 0;
   }
 }
 </style>
