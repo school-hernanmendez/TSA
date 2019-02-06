@@ -24,10 +24,7 @@
     <div class="beliefs">
       <div data-scroll class="beliefs-in">
         <h2>Our beliefs</h2>
-        <p>Worry less, Live more<br>
-Think less, See more<br>
-Know less, Experience more<br>
-Hate less, Love more<br>
+        <p>
 Music is a powerful art. It’s a gift that allows us to express who we are and experience life to its fullest. Wilder believes in freedom, beauty, truth, and love. 
 </p>
       </div>
