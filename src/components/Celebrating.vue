@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="top-screen"></div>
-    <Navbar state="initial" />
+    <Navbar state="initial"/>
     <div class="homescreen full">
       <div class="title">
         <h1 class="wilder" data-scroll>Wilder</h1>
@@ -17,46 +17,95 @@
       <div class="cnt">
         <h2>Who we are</h2>
         <p>
-          We are just an imaginary band made by a weird, but smart and absolutely fabulous teenager.<br/>(weird flex, but ok)<br/> Our members are all depressed
-          "young adults", i.e. legal teenagers.<br/> Bye. <br/>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          We are just an imaginary band made by a weird, but smart and absolutely fabulous teenager.
+          <br>(weird flex, but ok)
+          <br>Our members are all depressed
+          "young adults", i.e. legal teenagers.
+          <br>Bye.
+          <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
     </div>
     <div class="beliefs">
       <div data-scroll class="beliefs-in">
         <h2>Our beliefs</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <p>We write for those without a pen and sing for those without a voice.</p>
       </div>
     </div>
     <div class="listen full">
       <h1>Listen to us</h1>
-
+      <audio src="../assets/music/.mp3" class="p1a"></audio>
+      <audio src="../assets/music/.mp3" class="p2a"></audio>
+      <audio src="../assets/music/.mp3" class="p3a"></audio>
+      <audio src="../assets/music/.mp3" class="p4a"></audio>
+      <audio src="../assets/music/.mp3" class="p5a"></audio>
+      <audio src="../assets/music/.mp3" class="p6a"></audio>
+      <audio src="../assets/music/.mp3" class="p7a"></audio>
+      <audio src="../assets/music/.mp3" class="p8a"></audio>
+      <audio src="../assets/music/.mp3" class="p9a"></audio>
+      <audio src="../assets/music/.mp3" class="p10a"></audio>
+      <div>
+        <div class="player p1">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+        <div class="player p2">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+        <div class="player p3">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+        <div class="player p4">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+        <div class="player p5">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+        <div class="player p6">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+        <div class="player p7">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+        <div class="player p8">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+        <div class="player p9">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+        <div class="player p10">
+          <i class="material-icons">play_arrow</i>
+          <p></p>
+        </div>
+      </div>
     </div>
     <div class="Buy full">
       <div class="cd"></div>
-      <div class="buy"></div>
+      <div class="buy">
+        <p>Buy our CDs</p>
+      </div>
     </div>
     <div class="Concerts full">
       <div class="concerts-title"></div>
-    </div>
-    <div class="Board full">
-      <h2>Talk with the fans</h2>
-      <div class="message-board">
-        <div class="messages"></div>
-        <div></div>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-import ScrollOut from 'scroll-out'
+import ScrollOut from "scroll-out";
 import Navbar from "./navbar.vue";
 
-function c(el, ch) { 
+function c(el, ch) {
   return el.classList[0] === ch;
-  }
+}
 
 export default {
   name: "Celebrating",
@@ -65,27 +114,31 @@ export default {
   },
   mounted() {
     this.so = ScrollOut({
-      threshold: .35,
+      threshold: 0.35,
       onShown(el) {
-        if(c(el, "top-shadow")) {
-          el.style.left = "18.5%"
-        } else if(c(el, "bottom-shadow")) {
-          el.style.left = "8.5%"
-        } else if(c(el, "wilder")) {
-          document.getElementsByClassName('navbar-wrapper')[0].classList.remove('fullnav')
-        } else if(c(el, "beliefs-in")) {
-          el.style.boxShadow = "-12px 11px 0px 0px rgba(231,166,26,1)"
+        if (c(el, "top-shadow")) {
+          el.style.left = "18.5%";
+        } else if (c(el, "bottom-shadow")) {
+          el.style.left = "8.5%";
+        } else if (c(el, "wilder")) {
+          document
+            .getElementsByClassName("navbar-wrapper")[0]
+            .classList.remove("fullnav");
+        } else if (c(el, "beliefs-in")) {
+          el.style.boxShadow = "-12px 11px 0px 0px rgba(231,166,26,1)";
         }
       },
       onHidden(el) {
-        if(c(el, "top-shadow")) {
-          el.style.left = "20%"
-        } else if(c(el, "bottom-shadow")) {
-          el.style.left = "10%"
-        } else if(c(el, "wilder")) {
-          document.getElementsByClassName('navbar-wrapper')[0].classList.add('fullnav')
-        } else if(c(el, "beliefs-in")) {
-          el.style.boxShadow = "0px 0px 0px 0px rgba(231,166,26,1)"
+        if (c(el, "top-shadow")) {
+          el.style.left = "20%";
+        } else if (c(el, "bottom-shadow")) {
+          el.style.left = "10%";
+        } else if (c(el, "wilder")) {
+          document
+            .getElementsByClassName("navbar-wrapper")[0]
+            .classList.add("fullnav");
+        } else if (c(el, "beliefs-in")) {
+          el.style.boxShadow = "0px 0px 0px 0px rgba(231,166,26,1)";
         }
       }
     });
@@ -94,7 +147,6 @@ export default {
     this.so.teardown();
   }
 };
-
 </script>
 
 <style>
@@ -109,13 +161,13 @@ export default {
   margin-top: 15vh;
   margin-bottom: -110px;
   margin-left: 100px;
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   font-size: 150px;
   position: relative;
 }
 .motto {
   margin-left: 100px;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 40px;
   position: absolute;
   width: 90vw;
@@ -132,12 +184,12 @@ export default {
       rgba(0, 0, 0, 0) 47%
     ),
     url("../assets/u-band.jpeg");
-    background: linear-gradient(
+  background: linear-gradient(
       117deg,
       white calc(47% - 10px),
       #adadad calc(47% - 9px),
       #adadad 47%,
-      rgba(238, 238, 238, .2) calc(47% + 1px),
+      rgba(238, 238, 238, 0.2) calc(47% + 1px),
       rgba(0, 0, 0, 0) 47%
     ),
     url("../assets/u-band.jpeg");
@@ -155,9 +207,11 @@ export default {
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   left: 20%;
   z-index: 1;
-  background: 
-  linear-gradient(rgba(0, 94, 255, 0.8) 0%, rgba(0, 94, 255, 0.5) 100%),
-  url("../assets/u-guitar.jpg");
+  background: linear-gradient(
+      rgba(0, 94, 255, 0.8) 0%,
+      rgba(0, 94, 255, 0.5) 100%
+    ),
+    url("../assets/u-guitar.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -169,9 +223,11 @@ export default {
   bottom: 0;
   left: 10%;
   z-index: 1;
-  background: 
-  linear-gradient(rgba(255, 102, 0, 0.5) 0%, rgba(255, 102, 0, 0.8) 100%),
-  url("../assets/u-singer.jpg");
+  background: linear-gradient(
+      rgba(255, 102, 0, 0.5) 0%,
+      rgba(255, 102, 0, 0.8) 100%
+    ),
+    url("../assets/u-singer.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -182,7 +238,7 @@ export default {
   width: 35vh;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   left: 20%;
-  transition: left .4s ease-out .2s;
+  transition: left 0.4s ease-out 0.2s;
 }
 .bottom-shadow {
   background-color: rgb(255, 255, 255);
@@ -192,7 +248,7 @@ export default {
   bottom: 0;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   left: 10%;
-  transition: left .4s ease-out .2s;
+  transition: left 0.4s ease-out 0.2s;
 }
 .cnt {
   float: right;
@@ -203,14 +259,14 @@ export default {
   margin-top: 15vh;
 }
 .cnt > h2 {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   font-size: 50px;
   margin-bottom: -30px;
   color: white;
 }
 .cnt > p {
   font-size: 20px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 .beliefs {
   background-image: url("../assets/u-beli.jpg");
@@ -227,11 +283,11 @@ export default {
   width: 320px;
   height: 380px;
   background-color: white;
-  box-shadow: 0px 0px 0px 0px rgba(231,166,26,1);
-  transition: box-shadow 1s .2s;
+  box-shadow: 0px 0px 0px 0px rgba(231, 166, 26, 1);
+  transition: box-shadow 1s 0.2s;
 }
 .beliefs h2 {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   font-weight: lighter;
   font-size: 40px;
   margin: 0;
@@ -242,7 +298,19 @@ export default {
 .beliefs p {
   margin: 10px 25px;
   font-size: 22px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: bold;
+}
+
+.player {
+  max-width: 500px;
+}
+@media (orientation: portrait) {
+  .top,
+  .bottom,
+  .top-shadow,
+  .bottom-shadow {
+    display: none;
+  }
 }
 </style>
