@@ -95,12 +95,18 @@
         </div>
       </div>
     </div>
+    <Copyright />
   </div>
 </template>
 
 <script>
+import Copyright from "./Copyright.vue";
+
 export default {
   name: "Programs",
+  components: {
+    Copyright
+  },
   methods: {
     home() {
       this.$router.push("/");

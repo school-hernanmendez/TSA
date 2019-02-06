@@ -34,74 +34,66 @@
     </div>
     <div class="listen full">
       <h1>Listen to us</h1>
-      <audio src="../assets/music/.mp3" class="p1a"></audio>
-      <audio src="../assets/music/.mp3" class="p2a"></audio>
-      <audio src="../assets/music/.mp3" class="p3a"></audio>
-      <audio src="../assets/music/.mp3" class="p4a"></audio>
-      <audio src="../assets/music/.mp3" class="p5a"></audio>
-      <audio src="../assets/music/.mp3" class="p6a"></audio>
-      <audio src="../assets/music/.mp3" class="p7a"></audio>
-      <audio src="../assets/music/.mp3" class="p8a"></audio>
-      <audio src="../assets/music/.mp3" class="p9a"></audio>
-      <audio src="../assets/music/.mp3" class="p10a"></audio>
+      <audio src="../assets/music/The_Inventors_-_01_-_Perfect.mp3" class="p1a"></audio>
+      <audio src="../assets/music/The_Inventors_-_02_-_10s_and_9s.mp3" class="p2a"></audio>
+      <audio src="../assets/music/The_Inventors_-_03_-_Still_Sailor.mp3" class="p3a"></audio>
+      <audio src="../assets/music/The_Inventors_-_04_-_Melon.mp3" class="p4a"></audio>
+      <audio src="../assets/music/The_Inventors_-_05_-_Venice.mp3" class="p5a"></audio>
+      <audio src="../assets/music/The_Inventors_-_06_-_Fire.mp3" class="p6a"></audio>
+      <audio src="../assets/music/The_Inventors_-_08_-_Malala.mp3" class="p7a"></audio>
+      <audio src="../assets/music/The_Inventors_-_09_-_Blood_Milk.mp3" class="p8a"></audio>
       <div>
         <div class="player p1">
           <i class="material-icons">play_arrow</i>
-          <p></p>
+          <p>Perfect</p>
         </div>
         <div class="player p2">
           <i class="material-icons">play_arrow</i>
-          <p></p>
+          <p>10s and 9s</p>
         </div>
         <div class="player p3">
           <i class="material-icons">play_arrow</i>
-          <p></p>
+          <p>Still Sailor</p>
         </div>
         <div class="player p4">
           <i class="material-icons">play_arrow</i>
-          <p></p>
+          <p>Melon</p>
         </div>
         <div class="player p5">
           <i class="material-icons">play_arrow</i>
-          <p></p>
+          <p>Venice</p>
         </div>
         <div class="player p6">
           <i class="material-icons">play_arrow</i>
-          <p></p>
+          <p>Fire</p>
         </div>
         <div class="player p7">
           <i class="material-icons">play_arrow</i>
-          <p></p>
+          <p>Malala</p>
         </div>
         <div class="player p8">
           <i class="material-icons">play_arrow</i>
-          <p></p>
-        </div>
-        <div class="player p9">
-          <i class="material-icons">play_arrow</i>
-          <p></p>
-        </div>
-        <div class="player p10">
-          <i class="material-icons">play_arrow</i>
-          <p></p>
+          <p>Blood Milk</p>
         </div>
       </div>
     </div>
-    <div class="Buy full">
+    <div class="buy full">
       <div class="cd"></div>
       <div class="buy">
-        <p>Buy our CDs</p>
+        <h3>Buy our CDs</h3>
+        <p>Enjoy to you heart's content</p>
+        <button class="1">Buy Physical copy</button>
+        <button class="2">Download</button>
       </div>
     </div>
-    <div class="Concerts full">
-      <div class="concerts-title"></div>
-    </div>
+    <Copyright />
   </div>
 </template>
 
 <script>
 import ScrollOut from "scroll-out";
 import Navbar from "./navbar.vue";
+import Copyright from "./Copyright.vue";
 
 function c(el, ch) {
   return el.classList[0] === ch;
@@ -110,7 +102,8 @@ function c(el, ch) {
 export default {
   name: "Celebrating",
   components: {
-    Navbar
+    Navbar,
+    Copyright
   },
   mounted() {
     this.so = ScrollOut({
@@ -150,6 +143,16 @@ export default {
 </script>
 
 <style>
+.buy {
+  display: none;
+}
+.listen {
+  display: none;
+  background: rgb(60, 60, 73);
+}
+.listen > h1 {
+  margin: 0;
+}
 .homescreen {
   display: flex;
   flex-direction: row;
@@ -311,6 +314,9 @@ export default {
   .top-shadow,
   .bottom-shadow {
     display: none;
+  }
+  .cnt {
+
   }
 }
 </style>

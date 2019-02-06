@@ -137,11 +137,14 @@
         <span>Source: tsaweb.org</span>
       </div>
     </div>
+    <Copyright />
   </div>
 </template>
 
 <script>
 import ScrollOut from "scroll-out";
+import Copyright from "./Copyright.vue";
+
 export default {
   name: "Chapter",
   mounted() {
@@ -184,11 +187,32 @@ export default {
     home() {
       this.$router.push("/");
     }
+  },
+  components: {
+    Copyright
   }
 };
 </script>
 
 <style>
+.officer-img.S {
+  background: url('../assets/vivian.jpg');
+}
+.officer-img.L {
+  background: url('../assets/Timmy.jpg');
+}
+.officer-img.R {
+  background: url('../assets/David.jpg');
+}
+.officer-img.Ly {
+  background: url('../assets/Adonis.jpg');
+}
+.officer-img.A {
+  background: url('../assets/Audrey.jpg');
+}
+.officer-img.K {
+  background: url('../assets/Kevin.jpg');
+}
 .about {
   font-family: "Righteous", cursive;
   background-color: rgb(227, 227, 227);
@@ -217,7 +241,6 @@ export default {
   margin: 0 auto;
   padding: 0 20px;
 }
-
 .image-nat {
   background: url("../assets/thumbnail-2.jpg");
   width: 200px;
@@ -445,7 +468,6 @@ s {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .officer > div.officer-img {
-  background-image: url("https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
   background-position: center;
   background-size: cover;
   width: 180px;

@@ -16,5 +16,13 @@ export default {
     .copyright {
         background: black;
         color: white;
+        margin: 0;
+        padding: 5px;
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    .copyright > p {
+        margin: 0;
+        margin-bottom: 5px;
     }
 </style>
