@@ -17,19 +17,19 @@
       <div class="cnt">
         <h2>Who we are</h2>
         <p>
-          We are just an imaginary band made by a weird, but smart and absolutely fabulous teenager.
-          <br>(weird flex, but ok)
-          <br>Our members are all depressed
-          "young adults", i.e. legal teenagers.
-          <br>Bye.
-          <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          We are Wilder, and we play for the uniquely wild You. We’re just five misfits with a passion for music, and true self-expression. 
         </p>
       </div>
     </div>
     <div class="beliefs">
       <div data-scroll class="beliefs-in">
         <h2>Our beliefs</h2>
-        <p>We write for those without a pen and sing for those without a voice.</p>
+        <p>Worry less, Live more<br>
+Think less, See more<br>
+Know less, Experience more<br>
+Hate less, Love more<br>
+Music is a powerful art. It’s a gift that allows us to express who we are and experience life to its fullest. Wilder believes in freedom, beauty, truth, and love. 
+</p>
       </div>
     </div>
     <div class="listen full">
